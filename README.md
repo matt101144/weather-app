@@ -1,1 +1,1 @@
-# weather-app
+this will be a programme showing the weather utilising html css javascript and api's
