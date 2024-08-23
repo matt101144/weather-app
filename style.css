@@ -8,21 +8,17 @@
 body{
     background-image: url(/images/sunrise-phu-quoc-island-ocean.jpg );
     background-size: cover;
-}
-
-
-.weather-app{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    
 }
 
+
+
 .weather-card{
-    display: flex;
-    flex-direction: column
+    margin: 20px;
 }
 .weather.form{
-    display: flex;
+    
+
 }
