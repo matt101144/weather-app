@@ -23,12 +23,12 @@ body{
     background: linear-gradient(150deg, hsl(210, 100%, 65%), hsl(138, 82%, 60%));
     padding: 60px;
     min-width: 200px;
-    margin: 20px;
+    margin: 30px;
     min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 35px;
     border: solid 2px black;
 }
 .cityinput{
@@ -66,4 +66,20 @@ button:active{
     margin-bottom: 15px;
     font-size: 25px;
     font-weight: bold;
+}
+.weatherDesc{
+    font-weight: bold;
+    font-size: 20px;
+}
+.tempDisplay{
+    font-weight: bold;
+    font-size: 20px;
+}
+.humidityDisplay{
+    font-weight: bold;
+    font-size: 20px;
+}
+.errorDisplay{
+    font-weight: bold;
+    font-size: 20px;
 }
