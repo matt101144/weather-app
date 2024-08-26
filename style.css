@@ -63,8 +63,8 @@ button:active{
     margin: 20px;
 }
 .cityChoice{
-    margin-bottom: 15px;
-    font-size: 25px;
+    margin-bottom: 5px;
+    font-size: 40px;
     font-weight: bold;
 }
 .weatherDesc{
@@ -73,7 +73,8 @@ button:active{
 }
 .tempDisplay{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 .humidityDisplay{
     font-weight: bold;
