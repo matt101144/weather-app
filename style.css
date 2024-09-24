@@ -18,10 +18,10 @@ body{
 
 
 
-.weather-form{
+.weatherForm{
     margin: 20px;
 }
-.weather-card{
+.weatherCard{
     background: linear-gradient(150deg, hsl(210, 100%, 65%), hsl(138, 82%, 60%));
     padding: 60px;
     min-width: 200px;
