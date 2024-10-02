@@ -3,15 +3,21 @@ const weatherForm = document.querySelector(".weatherForm");
 const cityChoice = document.querySelector(".cityChoice");
 const weatherCard = document.querySelector(".weatherCard");
 
-weatherForm.addEventListener("submit", event => {
+weatherForm.addEventListener("submit", async event => {
 
     event.preventDefaultMethod();
 
     const city = cityInput.value;
 
-
     if(city){
-
+        try{
+            const weatherData = await getWeatherData(city);
+            displayWeatherInfo(weatherData);
+        }
+        catch(error){
+            console.error(error);
+            displayError(error);
+        }
     }
     else{
         displayError("please enter a correct city");
@@ -24,7 +30,7 @@ async function getWeatherInfo(city){
 
 };
 
-function displayEroor(message){
+function displayError(message){
 
     const errorDisplay = document.createElement("p");
     errorDisplay.textContent = message;
