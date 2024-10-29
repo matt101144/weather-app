@@ -4,44 +4,45 @@ const cityInput = document.querySelector(".cityInput");
 const weatherCard = document.querySelector(".weatherCard");
 
 weatherForm.addEventListener("submit", async event => {
-
-    event.preventDefaultMethod();
+    event.preventDefault();
 
     const city = cityInput.value;
 
-    if(city){
-        try{
+    if (city) {
+        try {
             const weatherData = await getWeatherData(city);
             displayWeatherInfo(weatherData);
-        }
-        catch(error){
+        } catch (error) {
             console.error(error);
-            displayError(error);
+            displayError("City not found");
         }
+    } else {
+        displayError("Please enter a city");
     }
-    else{
-        displayError("please enter a correct city");
-    }
-
-
 });
 
-async function getWeatherData(city){
-
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-
+async function getWeatherData(city) {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     const response = await fetch(apiUrl);
+    if (!response.ok) {
+        throw new Error("City not found"); 
+    }
+    return response.json();
+}
 
-    console.log(response);
-};
+function displayWeatherInfo(data) {
+    document.querySelector(".cityChoice").textContent = data.name;
+    document.querySelector(".tempDisplay").textContent = `${Math.round(data.main.temp)}°C`;
+    document.querySelector(".weatherDesc").textContent = data.weather[0].description;
+    document.querySelector(".humidityDisplay").textContent = `Humidity: ${data.main.humidity}%`;
+    document.querySelector(".errorDisplay").textContent = ""; 
+}
 
-function displayError(message){
-
+function displayError(message) {
+    weatherCard.textContent = ""; 
     const errorDisplay = document.createElement("p");
     errorDisplay.textContent = message;
     errorDisplay.classList.add("errorDisplay");
-
-    card.textContent = "";
-    card.style.display = "flex";
-    card.appendChild(errorDisplay);
-};
+    weatherCard.style.display = "flex";
+    weatherCard.appendChild(errorDisplay);
+}
