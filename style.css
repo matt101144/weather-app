@@ -1,11 +1,12 @@
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url(/images/sunrise-phu-quoc-island-ocean.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,15 +14,15 @@ body{
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    height: 1000px;
+    height: 100vh;
 }
 
-
-
-.weatherForm{
+.weatherForm {
     margin: 20px;
 }
-.weatherCard{
+
+.weatherCard {
+    display: none; /* Initially hidden */
     background: linear-gradient(150deg, hsl(210, 100%, 65%), hsl(138, 82%, 60%));
     padding: 60px;
     min-width: 200px;
@@ -33,16 +34,18 @@ body{
     gap: 35px;
     border: solid 2px black;
 }
-.cityInput{
-   padding: 10px;
-   font-weight: bold;
-   border-radius: 15px;
-   width: 250px;
-   border: 2px solid black;
-   margin: 10px;
-   font-size: 15px;
+
+.cityInput {
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 250px;
+    border: 2px solid black;
+    margin: 10px;
+    font-size: 15px;
 }
-button{
+
+button {
     padding: 10px 20px;
     border-radius: 15px;
     font-weight: bold;
@@ -50,13 +53,16 @@ button{
     width: 200px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background-color: hsl(0, 8%, 79%);
 }
-button:active{
+
+button:active {
     background-color: hsl(0, 8%, 55%);
 }
-.title{
+
+.title {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -64,25 +70,32 @@ button:active{
     font-weight: bold;
     margin: 20px;
 }
-.cityChoice{
+
+.cityChoice {
     margin-bottom: 5px;
     font-size: 40px;
     font-weight: bold;
 }
-.weatherDesc{
+
+.weatherDesc {
     font-weight: bold;
     font-size: 20px;
 }
-.tempDisplay{
+
+.tempDisplay {
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 10px;
 }
-.humidityDisplay{
+
+.humidityDisplay {
     font-weight: bold;
     font-size: 20px;
 }
-.errorDisplay{
+
+.errorDisplay {
+    display: none; /* Hidden initially */
+    color: red;
     font-weight: bold;
     font-size: 20px;
 }
