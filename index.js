@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", async (event) => {
             displayWeatherInfo(weatherData);
         } catch (error) {
             console.error("Error caught:", error.message);
-            displayError("City not found");  // Explicit message for city not found
+            displayError("City not found");  
         }
     } else {
         displayError("Please enter a city.");
@@ -43,9 +43,9 @@ function displayWeatherInfo(data) {
 }
 
 function displayError(message) {
-    console.log("Displaying error message:", message);  // Debug log
+    console.log("Displaying error message:", message);  
     errorDisplay.textContent = message;  // Add error message to the element
-    errorDisplay.style.display = "block";  // Make error display visible
+    errorDisplay.style.display = "block";  
 
     // Hide the weather card if there's an error
     weatherCard.style.display = "none";
