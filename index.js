@@ -47,6 +47,5 @@ function displayError(message) {
     errorDisplay.textContent = message;  // Add error message to the element
     errorDisplay.style.display = "block";  
 
-    // Hide the weather card if there's an error
     weatherCard.style.display = "none";
 }
