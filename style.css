@@ -44,7 +44,9 @@ body {
     gap: 35px;
     border: solid 2px #333; 
 }
-
+.getWeatherButton{
+    border: none;
+}
 .cityInput {
     padding: 10px;
     font-weight: bold;
