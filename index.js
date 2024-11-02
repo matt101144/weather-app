@@ -71,6 +71,26 @@ const cityInput = document.querySelector(".cityInput");
 const weatherCard = document.querySelector(".weatherCard");
 const errorDisplay = document.querySelector(".errorDisplay");
 
+const weatherEmojis = {
+    Clear: "☀️",
+    Clouds: "☁️",
+    Rain: "🌧️",
+    Drizzle: "🌦️",
+    Thunderstorm: "⛈️",
+    Snow: "❄️",
+    Mist: "🌫️",
+    Smoke: "💨",
+    Haze: "🌫️",
+    Dust: "🌪️",
+    Fog: "🌁",
+    Sand: "🏜️",
+    Ash: "🌋",
+    Squall: "🌬️",
+    Tornado: "🌪️"
+};
+
+
+
 weatherForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const city = cityInput.value.trim();
