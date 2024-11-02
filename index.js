@@ -117,10 +117,17 @@ async function getWeatherData(city) {
 }
 
 function displayWeatherInfo(data) {
+
+    const weatherMain = data.weather[0].main;
+
     document.querySelector(".cityChoice").textContent = data.name;
     document.querySelector(".tempDisplay").textContent = `${Math.round(data.main.temp)}°C`;
     document.querySelector(".weatherDesc").textContent = data.weather[0].description;
     document.querySelector(".humidityDisplay").textContent = `Humidity: ${data.main.humidity}%`;
+   
+    const emoji = weatherEmojis[weatherMain] || "☀️";
+    document.querySelector(".weatherEmoji").textContent = emoji;
+    
     weatherCard.style.display = "flex";
     errorDisplay.style.display = "none";
 }
