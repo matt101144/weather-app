@@ -107,3 +107,9 @@ button:active {
 .errorDisplay {
     color: #ff4c4c;
 }
+.weatherEmoji {
+    font-size: 50px; 
+    color: #FFD700;
+    opacity: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
