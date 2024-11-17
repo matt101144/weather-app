@@ -109,7 +109,13 @@ button:active {
 }
 .weatherEmoji {
     font-size: 50px; 
-    color: #FFD700;
+    color: inherit;
     opacity: 1;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.locationDescription {
+    font-size: 18px;
+    color: #e0e0e0;
+    font-style: italic;
 }
