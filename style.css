@@ -35,7 +35,7 @@ body {
     background: linear-gradient(150deg, #232526, #414345); 
     color: #f0f0f0;
     padding: 60px;
-    min-width: 200px;
+    min-width: 400px;
     margin: 30px;
     min-height: 250px;
     display: flex;
