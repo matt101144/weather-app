@@ -119,3 +119,6 @@ button:active {
     color: #e0e0e0;
     font-style: italic;
 }
+.humidityDisplay{
+    margin-bottom: 20px;
+}
